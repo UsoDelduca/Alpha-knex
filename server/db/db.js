@@ -3,12 +3,12 @@ import knexfile from './knexfile.js'
 
 const environment = process.env.NODE_ENV || 'development'
 const config = knexfile[environment]
-export const connection = knex(config)
+export const db = knex(config)
 
-export async function getUsers() {
-  return connection('users').select()
+export async function getAlphas() {
+  return db('alphas').select()
 }
 
-export async function getUser(id) {
-  return connection('users').where('id', id).first()
+export async function getAlpha(id) {
+  return db('alphas').where('id', id).first()
 }

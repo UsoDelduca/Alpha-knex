@@ -1,5 +1,15 @@
-<ul>
-  {{#each users}}
-  <li>{{name}} ({{email}})</li>
-  {{/each}}
-</ul>
+<div class="new-data" >
+        <label class="new-data"><input id="colour-input" /></label>
+        <label class="new-data"><input id="plate-input" /></label>
+      </div>
+      <div class="table-of-contents" id="table">
+        <div class="header">
+          <div class="colour-cell" id="cell">Colour</div>
+          <div class="plate-cell" id="cell">Plate</div>
+        </div>
+        {{>newcar}}
+      </div>
+      <div class="add-new">
+        <button id="button" type="submit" name="" >Add new car</button>
+      </div>
+    </div>
