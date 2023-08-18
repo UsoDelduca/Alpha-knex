@@ -74,8 +74,9 @@
   font-size: 25px;
 }
 .header,
-.row {
-  display: table-row-group;
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 .colour-cell,
