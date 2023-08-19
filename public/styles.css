@@ -3,6 +3,8 @@
 }
 .app-container {
   width: auto;
+  /* display: flex;
+  flex-direction: column; */
   display: grid;
   margin: 5px;
   padding: 5px;
@@ -65,28 +67,42 @@
 
 .table-of-contents {
   width: 100%;
-  display: table;
-
+  display: flex;
+  flex-direction: column;
+  border: solid 2px antiquewhite;
   background-color: antiquewhite;
 }
 
-.header {
+.header, .header-colour-cell, .header-plate-cell {
   font-size: 25px;
-}
-.header,
-.column {
   display: flex;
-  flex-direction: column;
-}
-
-.colour-cell,
-.plate-cell {
-  display: table-cell;
+  flex-direction: row;
+  justify-content: space-around;
   background-color: rgb(212, 209, 209);
   border: solid 2px antiquewhite;
   padding: 2px;
 }
 
+.column {
+  display: flex;
+ 
+  flex-direction: column;
+justify-content: center;
+  border: solid 2px black;
+}
+
+
+
+
+.color-list{
+display: flex;
+flex-direction: row;
+}
+
+.plate-list{
+  display: flex;
+  flex-direction: row;
+}
 .add-new {
   border-radius: 3px;
   display: flex;

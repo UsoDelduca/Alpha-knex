@@ -1,15 +1,19 @@
-<div class="new-data" >
-        <label class="new-data"><input id="colour-input" placeholder="Colour"/></label>
-        <label class="new-data"><input id="plate-input" placeholder="Plate"/></label>
-      </div>
+<form class="new-data" method="post">
+  <label for="colour" class="new-data">
+    <input id="colour-input" name="colour" placeholder="Colour"/>
+  </label>
+  <label for="plate" class="new-data">
+    <input id="plate-input" name="plate" placeholder="Plate"/>
+  </label>
+  <input id="button" type="submit" name="" />
+</form>
       <div class="table-of-contents" id="table">
         <div class="header">
-          <div class="colour-cell" id="cell">Colour</div>
-          <div class="plate-cell" id="cell">Plate</div>
+          <div class="header-colour-cell" id="cell">Colour</div>
+          <div class="header-plate-cell" id="cell">Plate</div>
         </div>
         {{>newcar}}
       </div>
       <div class="add-new">
-        <button id="button" type="submit" name="" >Add new car</button>
       </div>
     </div>
