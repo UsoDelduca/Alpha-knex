@@ -2,7 +2,7 @@ import express from 'express'
 
 import * as db from '../db/db.js'
 
-import { addNewCar } from '../db/index.js'
+import { addNewCar, editCar, getCarById } from '../db/index.js'
 
 const router = express.Router()
 
@@ -22,9 +22,28 @@ router.post('/', async (req, res) => {
 
   // const filePath = Path.join(__dirname, 'data', 'data.json')
 
-  const addCar = await addNewCar(input)
-  console.log(addCar)
+  await addNewCar(input)
 
+  res.redirect('/')
+})
+
+// edit user input
+
+router.get('/edit/:id', async (req, res) => {
+  const id = Number(req.params.id)
+
+  const viewData = await getCarById(id)
+  console.log(viewData)
+  res.render('editCar', viewData)
+})
+
+// post edit input
+
+router.post('/edit/:id', async (req, res) => {
+  const input = req.body
+  const id = Number(req.params.id)
+  console.log(input, id)
+  await editCar(id, input)
   res.redirect('/')
 })
 

@@ -1,0 +1,15 @@
+<h1>Edit car: <span class="data">{{colour}} {{plate}}</span></h1>
+
+<form method="Post" action="/edit/{{id}}" class="form">
+<input type="hidden" name="id" value="{{id}}" />
+
+<label for="colour" class="label">Colour:</label>
+
+<input type="text" id="name" name="colour" value="{{colour}}" />
+
+<label for="plate" class="label">Plate:</label>
+<input type="text" id="name" name="plate" value="{{plate}}" />
+
+<button>Update Car details</button>
+
+</form>
