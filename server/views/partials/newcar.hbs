@@ -1,15 +1,22 @@
   {{#each alphas}}
-<div class='column'>
+<div class="flex-row">
+
+
  
-  <div class="color-list">
+  <div class="flex-cell">
     {{colour}}
   </div>
   
  
-  <div class="plate-list">
+  <div class="flex-cell">
   {{plate}}
   </div>
-   
+
   
+  <button id="{{id}}" class="add-new" type="submit"><a href="/edit/{{id}}">edit</a></button>
+
+  
+   
 </div>
   {{/each}}
+  

@@ -73,37 +73,32 @@
   background-color: antiquewhite;
 }
 
-.header, .header-colour-cell, .header-plate-cell {
-  font-size: 25px;
+.flex-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  border: 1px solid #ccc;
+}
+
+.flex-cell-header {
   background-color: rgb(212, 209, 209);
+  font-size: 25px;
+  width: 50%;
+  padding: 10px;
   border: solid 2px antiquewhite;
-  padding: 2px;
+  
 }
 
-.column {
-  display: flex;
- 
-  flex-direction: column;
-justify-content: center;
-  border: solid 2px black;
+.flex-cell {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
-
-
-
-.color-list{
-display: flex;
-flex-direction: row;
-}
-
-.plate-list{
-  display: flex;
-  flex-direction: row;
-}
-.add-new {
+.add-new, .delete {
   border-radius: 10px;
-   
-}
+ }
+
+ a{
+  text-decoration: none;
+  color: black;
+ }

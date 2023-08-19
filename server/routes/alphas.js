@@ -2,7 +2,7 @@ import express from 'express'
 
 import * as db from '../db/db.js'
 
-import { addNewCar, editCar, getCarById } from '../db/index.js'
+import { addNewCar, editCar, getCarById, delCar } from '../db/index.js'
 
 const router = express.Router()
 
@@ -42,8 +42,18 @@ router.get('/edit/:id', async (req, res) => {
 router.post('/edit/:id', async (req, res) => {
   const input = req.body
   const id = Number(req.params.id)
-  console.log(input, id)
+
   await editCar(id, input)
+  res.redirect('/')
+})
+
+// delete Car
+
+router.post('/edit/:id', async (req, res) => {
+  // const input = req.body
+  const id = req.body.id
+  console.log(req.params.id)
+  await db.delCar(id)
   res.redirect('/')
 })
 

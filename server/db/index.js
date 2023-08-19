@@ -20,3 +20,7 @@ export async function editCar(id, car) {
     .where('id', id)
     .update({ colour: car.colour, plate: car.plate })
 }
+
+export async function delCar(id) {
+  return await db('alphas').where('id', id).del()
+}
