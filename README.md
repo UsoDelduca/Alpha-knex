@@ -1,10 +1,7 @@
-# Boilerplate: Knex.js
+This is my personal project. 
+The idea is to use user input and save it to a database using routes, servers and a middleware to "talk to" SQLite3
 
-## Setup
-
-### What's included
-
-Phase 1 boilerplate project with:
+The packages include:
 
  - Express
  - Knex
@@ -26,4 +23,4 @@ npm run dev
 Be sure to check out the other npm scripts too.
 
 ---
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-knex)
+
